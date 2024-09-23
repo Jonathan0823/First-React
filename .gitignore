@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-src/ApiKey.js
+
 
 # Editor directories and files
 .vscode/*
@@ -23,3 +23,4 @@ src/ApiKey.js
 *.njsproj
 *.sln
 *.sw?
+.env

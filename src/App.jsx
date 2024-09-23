@@ -2,7 +2,6 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import SearchIcon from "./search.svg";
 import MovieCard from "./MovieCard";
-import ApiKey from "./ApiKey";
 
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const searchMovie = async (title) => {
-    const response = await fetch(ApiKey + "&s=" + title);
+    const response = await fetch("http://www.omdbapi.com/?apikey=" + import.meta.env.VITE_REACT_API_KEY + "&s=" + title);
     const data = await response.json();
     setMovies(data.Search);
   };
